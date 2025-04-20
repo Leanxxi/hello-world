@@ -1,3 +1,4 @@
+from os import system
 # Estructuras de control GUIA DE EJERCICIOS Nº 3
 # Los ejercicios que encontrarán a continuación los harán ejercitar los temas de expresiones, estructuras de
 # control iterativas y estructuras de control condicionales. Se busca que se puedan aplicar los conocimientos
@@ -7,8 +8,8 @@
 
 # 1. Escribir la expresión para saber si un número es más grande que otro. Guardarla en una variable de tipo
 # bool e imprimirla por pantalla para ver su valor.
-numero_uno = 76
-numero_dos = 46
+# numero_uno = 76
+# numero_dos = 46
 
 # booleano = numero_uno > numero_dos
 
@@ -46,7 +47,17 @@ numero_dos = 46
 # 4. Crear una función que dado un número, devuelva su valor absoluto. El valor absoluto de un número es
 # el mismo número sin considerar el signo.
 
+# def obtener_valor_absoluto(numero):
+#     if numero < 0:
+#         numero = numero * -1
+    
+#     return numero
 
+# numero = -24
+
+# valor_absoluto = obtener_valor_absoluto(numero)
+
+# print(valor_absoluto)
 
 # 5. Crear el programa al que sea imposible ganarle en el juego de “Piedra, papel o tijera”. Cada elemento va
 # a ser representado con una letra: R para piedra, P para papel y T para tijera.
@@ -60,36 +71,79 @@ numero_dos = 46
 # b. Mostrar por pantalla el mensaje “NO vale” cuando el usuario ingresa una letra no válida
 # (distinta de R, P o T).
 
+# eleccion = input("¡Juguemos! Ingresá piedra ( R), papel (P) o tijera (T)")
+
+# if eleccion == "R" or eleccion == "r":
+#     print("Papel, te gane")
+# elif eleccion == "P" or eleccion == "p":
+#     print("Tijera, te gané")
+# elif eleccion == "T" or eleccion == "t":
+#     print("Piedra te gané")
+# else:
+#     print("no vale")
+
+
 # 6. Escribir código que dado dos enteros, determine si la suma de ambos da menos que 100. Si la suma de
 # ambos es menor a 100, calcular cuánto falta para llegar a 100 y mostrar por pantalla un mensaje con
 # ese valor. Si la suma es mayor a 100, mostrar un mensaje diciendo “Llega a 100”.
 # Extra: ¿Cómo harían para que el programa quede generalizado para cualquier límite, a elección del
 # usuario, y no solo para 100?.
 
+# entero_uno = int(input("ingrese el primer entero a sumar"))
+# entero_dos = int(input("ingrese el segundo entero a sumar"))
+# limite = int(input("ingrese el entero limite"))
+
+# suma = entero_dos + entero_uno
+
+# if suma < 100:
+#     print(f"{suma} es menor que {limite}")
+#     faltante = limite - suma
+#     print(f"falta {faltante} para llegar a {limite}")
+# else:
+#     print(f"{suma} llega a {limite}")
+
 # 7. Se tienen letras para representar las estaciones del año:
 # ● V para verano
 # ● O para otoño
 # ● I para invierno
-# 2
-# Estructuras de control GUIA DE EJERCICIOS Nº 3
 # ● P para primavera
 # Crear una función que dada una letra, imprima por pantalla la estación del año que representa (es
 # decir, si se ingresa V se mostrará por pantalla el mensaje “Verano”). En caso de no representar a
 # ninguna estación mostrar un mensaje que diga “error”. Probar la función creada llamándola con A, P, O,
 # B, V e I.
-# Estructuras de control iterativas
 
+# Estructuras de control iterativas
 # 8. Se quiere hacer un programa para enseñar a unos niños a contar. Crear una función que reciba un
 # número entero e imprima por pantalla los números del 1 hasta ese número con la estructura de control
 # iterativa for.
+
+# def contar(entero : int):
+#     for i in range( 1 ,entero + 1):
+#         print(i)
+
+# entero = int(input("ingrese un entero para contar"))
+# contar(entero)
 
 # 9. Se quiere mejorar el programa para enseñar matemáticas pensado en el ejercicio anterior. Ahora se
 # necesita una funcionalidad que permita a los niños aprender las tablas. Crear una función que reciba un
 # número entero e imprima por pantalla la tabla de ese número del 1 al 10.
 
+# def multiplicar_tablas(entero: int):
+#     for i in range(1,11):
+#         multiplicacion = entero * i
+#         print(f"{entero} x {i} = {multiplicacion}")
+
+# entero = int(input("ingrese entero para ver su tabla\n"))
+
+# multiplicar_tablas(entero)
+# system("pause")
+
 # 10. Crear una función que simule un cumpleaños: que dado un entero imprima “Que los cumplas feliz” esa
 # cantidad de veces.
+entero=20
 
+for i in range(entero):
+    print("que lo cumplas feliz")
 # 11. En un almacén están buscando la forma de hacer los cobros más automáticamente. Para esto, se nos
 # pide crear una función que reciba un número entero que representa lo que hay que cobrar, le pida al
 # usuario ingresar un monto, y se vaya mostrando por pantalla cuánto falta para completar el pago.
