@@ -1,3 +1,24 @@
+
+def ingresar_entero() -> int:
+    """Pide un entero, lo valida y devuelve un entero
+        si falla, lo vuelve a pedir
+    Returns:
+        int : entero
+    """
+    while True:
+        print("ingrese su edad: ")
+        try:
+            edad = int(input())
+            break
+        except:
+            print("No ingresaste un entero!")
+
+    return edad
+
+edad = ingresar_entero()
+print(f"la edad ingresada por el usuario es: {edad}")
+print(type(edad))
+
 # Archivos GUIA DE EJERCICIOS Nº 7
 # 1. Se quiere hacer un programa para pedirle al usuario que ingrese un número entero, y en caso de que el
 # valor ingresado no sea un número entero, mostrarle un mensaje apropiado.
